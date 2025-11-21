@@ -6,8 +6,6 @@ services:
     container_name: certamen2_nginx
     ports:
       - "8081:80"  # Puerto 8081 en el host, 80 en el contenedor
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro  # Configuración personalizada (opcional)
     restart: unless-stopped
     networks:
       - app-network
